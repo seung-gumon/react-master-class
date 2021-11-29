@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {Link} from 'react-router-dom';
 import {useQuery} from 'react-query';
 import {fetchCoins} from "../api";
+import {Helmet} from "react-helmet";
 
 const Container = styled.div`
   padding: 0px 20px;
@@ -72,7 +73,9 @@ function Coins() {
 
     return <Container>
         <Header>
-            <Title>코인</Title>
+            <Helmet>
+                <title>코인</title>
+            </Helmet>
         </Header>
         {isLoading ? <Loader>Loading...</Loader> :
             <CoinList>

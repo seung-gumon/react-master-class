@@ -12,6 +12,7 @@ import Chart from "./Chart";
 import {Link} from 'react-router-dom'
 import {useQuery} from "react-query";
 import {fetchCoinInfo, fetchCoinTickers} from "../api";
+import {Helmet} from 'react-helmet';
 
 const Header = styled.header`
   height: 15vh;
@@ -169,12 +170,17 @@ function Coin() {
     const {
         isLoading: coinPriceLoading,
         data: coinPrice
-    } = useQuery<PriceData>(["tickers", coinId], () => fetchCoinTickers(coinId))
+    } = useQuery<PriceData>(["tickers", coinId], () => fetchCoinTickers(coinId), {
+        refetchInterval : 5000
+    })
 
 
     const loading = coinInfoLoading || coinPriceLoading;
 
     return <Container>
+        <Helmet>
+            <title>{state?.name ? state.name : loading ? "Loading..." : coinInfoData?.name}</title>
+        </Helmet>
         <Header>
             <Title>
                 {state?.name ? state.name : loading ? "Loading..." : coinInfoData?.name}
@@ -194,8 +200,8 @@ function Coin() {
                         <span>${coinInfoData?.symbol}</span>
                     </OverviewItem>
                     <OverviewItem>
-                        <span>Open Source:</span>
-                        <span>{coinInfoData?.open_source ? "Yes" : "No"}</span>
+                        <span>Price:</span>
+                        <span>{coinPrice?.quotes.USD.price.toFixed(3)}</span>
                     </OverviewItem>
                 </Overview>
                 <Description>{coinInfoData?.description}</Description>
