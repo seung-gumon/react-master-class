@@ -1,8 +1,15 @@
 import styled from "styled-components";
 import {useEffect, useState} from "react";
-import {Switch, Route, useLocation, useParams} from "react-router";
+import {
+    Switch,
+    Route,
+    useLocation,
+    useParams,
+    useRouteMatch,
+} from "react-router-dom";
 import Price from "./Price";
 import Chart from "./Chart";
+import {Link} from 'react-router-dom'
 
 const Header = styled.header`
   height: 15vh;
@@ -10,7 +17,28 @@ const Header = styled.header`
   justify-content: center;
   align-items: center;
 `
+const Tabs = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 25px 0px;
+  gap: 10px;
+`;
 
+const Tab = styled.span<{ isActive: boolean }>`
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 7px 0px;
+  border-radius: 10px;
+  color: ${(props) =>
+          props.isActive ? props.theme.accentColor : props.theme.textColor};
+
+  a {
+    display: block;
+  }
+`;
 
 const Overview = styled.div`
   display: flex;
@@ -31,6 +59,16 @@ const OverviewItem = styled.div`
     margin-bottom: 5px;
   }
 `;
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 950px;
+  width: 100%;
+  margin : 0 auto;
+`
+
+
 const Description = styled.p`
   margin: 20px 0px;
 `;
@@ -118,7 +156,8 @@ function Coin() {
     const [loading, setLoading] = useState(true);
     const {coinId} = useParams<IParams>();
     const {state} = useLocation<RouteState>();
-
+    const priceMatch = useRouteMatch("/:coinId/price");
+    const chartMatch = useRouteMatch("/:coinId/chart");
 
     const [info, setInfo] = useState<InfoData>();
     const [priceInfo, setPriceInfo] = useState<PriceData>();
@@ -143,7 +182,7 @@ function Coin() {
         {loading ? (
             <Loader>Loading...</Loader>
         ) : (
-            <>
+            <Wrapper>
                 <Overview>
                     <OverviewItem>
                         <span>Rank:</span>
@@ -169,6 +208,16 @@ function Coin() {
                         <span>{priceInfo?.max_supply}</span>
                     </OverviewItem>
                 </Overview>
+
+                <Tabs>
+                    <Tab isActive={chartMatch !== null}>
+                        <Link to={`/${coinId}/chart`}>Chart</Link>
+                    </Tab>
+                    <Tab isActive={priceMatch !== null}>
+                        <Link to={`/${coinId}/price`}>Price</Link>
+                    </Tab>
+                </Tabs>
+
                 <Switch>
                     <Route path={`/${coinId}/price`}>
                         <Price/>
@@ -177,7 +226,7 @@ function Coin() {
                         <Chart/>
                     </Route>
                 </Switch>
-            </>
+            </Wrapper>
         )}
     </Container>
 }

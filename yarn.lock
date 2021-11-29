@@ -1899,6 +1899,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-query@^1.2.9":
+  "integrity" "sha512-xfVcv5zjC6fGf6axPyKxdXNm9RKK9OFzSIyZeCR3r9h4zDuqSpHc8ilTBtfQ1zU/uCx+tAsB+W6vzdCBMu1jtg=="
+  "resolved" "https://registry.npmjs.org/@types/react-query/-/react-query-1.2.9.tgz"
+  "version" "1.2.9"
+  dependencies:
+    "react-query" "*"
+
 "@types/react-router-dom@^5.3.0":
   "integrity" "sha512-svUzpEpKDwK8nmfV2vpZNSsiijFNKY8+gUqGqvGGOVrXvX58k1JIJubZa5igkwacbq/0umphO5SsQn/BQsnKpw=="
   "resolved" "https://registry.npmjs.org/@types/react-router-dom/-/react-router-dom-5.3.0.tgz"
@@ -9537,10 +9544,10 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-17.0.1.tgz"
   "version" "17.0.1"
 
-"react-query@^3.33.3":
-  "integrity" "sha512-SDuNTszxDdZdA9n241sV9hDdHgkS5TzXFar+cb4IMO9t6MU4NakSRAuwlNNmpRcFR6/yIbLwICzvOlkAXaM4KA=="
-  "resolved" "https://registry.npmjs.org/react-query/-/react-query-3.33.3.tgz"
-  "version" "3.33.3"
+"react-query@*", "react-query@^3.33.7":
+  "integrity" "sha512-uL/1ZatxcRyvfhbNPeuOlLVbcdMQKzQ2t+SQLJMrMM0plfa/Al3buaPbGsbsmIwvyWeI4CVkkSBKzQIkU4p9MQ=="
+  "resolved" "https://registry.npmjs.org/react-query/-/react-query-3.33.7.tgz"
+  "version" "3.33.7"
   dependencies:
     "@babel/runtime" "^7.5.5"
     "broadcast-channel" "^3.4.1"
