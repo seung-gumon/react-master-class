@@ -206,7 +206,7 @@ function Coin() {
             </OverviewItem>
             <OverviewItem>
               <span>Price:</span>
-              <span>{coinPrice?.quotes.USD.price.toFixed(3)}</span>
+              <span>{coinPrice?.quotes?.USD?.price?.toFixed(3)}</span>
             </OverviewItem>
           </Overview>
           <Description>{coinInfoData?.description}</Description>
