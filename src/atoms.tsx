@@ -1,13 +1,13 @@
 import {atom, selector} from "recoil";
 
-type categories = "TO_DO" | "DOING" | "DONE";
-
-
+interface IToDoState {
+    [key: string]: string[];
+}
 
 export enum Categories {
-    "TO_DO"="TO_DO",
-    "DOING"="DOING",
-    "DONE"="DONE"
+    "TO_DO" = "TO_DO",
+    "DOING" = "DOING",
+    "DONE" = "DONE"
 }
 
 export interface IToDo {
@@ -51,18 +51,22 @@ export const minuteState = atom({
 
 export const hourSelector = selector<number>({
     key: "hours",
-    get: ({ get }) => {
+    get: ({get}) => {
         const minutes = get(minuteState);
         return minutes / 60;
     },
-    set: ({ set }, newValue) => {
+    set: ({set}, newValue) => {
         const minutes = Number(newValue) * 60;
         set(minuteState, minutes);
     },
 });
 
 
-export const toDoStateTwo = atom({
-    key : "toDo",
-    default : ["a", "b", "c", "d", "e", "f"]
+export const toDoStateTwo = atom<IToDoState>({
+    key: "toDo",
+    default: {
+        to_do: ["a", "b", "c", "d", "e", "f"],
+        doing: [],
+        done: [],
+    }
 })

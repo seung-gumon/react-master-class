@@ -5,18 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2089ee02-20da-41a6-9ed9-81737c74f8f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/DragabbleCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/Drag.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Board.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Router.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Router.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/atoms.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/atoms.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/Coin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Coin.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styled.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styled.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DragabbleCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DragabbleCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Drag.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Drag.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +81,7 @@
       <workItem from="1640522449633" duration="5483000" />
       <workItem from="1640528372465" duration="27000" />
       <workItem from="1640528408861" duration="7025000" />
+      <workItem from="1642347945364" duration="1101000" />
     </task>
     <servers />
   </component>
