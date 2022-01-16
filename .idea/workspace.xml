@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2089ee02-20da-41a6-9ed9-81737c74f8f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Board.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/atoms.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/atoms.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DragabbleCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DragabbleCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Board.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Board.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/Drag.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Drag.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
